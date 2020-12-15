@@ -36,7 +36,7 @@ class Header extends Component {
     return(
       <nav>
         <div className="nav-wrapper">
-          <Link to="/" className="brand-logo left">
+          <Link to="/dashboard" className="brand-logo left">
             Pokedex React
           </Link>
           <ul className="right">

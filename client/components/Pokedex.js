@@ -40,18 +40,14 @@ class Pokedex extends Component{
     .then((res) => {
       this.setState({pokemon: res.data.results, nextPageUrl: res.data.next, prevPageUrl: res.data.previous })
 
-
     })
   }
 
-
   render(){
-
 
     return(
       <div>
         <PokemonList pokemon={this.state.pokemon}/>
-
         <button onClick={this.onButtonPrevious.bind(this)}>Previous 20</button>
         <button onClick={this.onButtonNext.bind(this)}>Next 20</button>
       </div>

@@ -4,7 +4,7 @@ import Pokedex from './Pokedex'
 export default () => {
   return (
     <div>
-      <h3>Dashboard</h3>
+      <div className="ui hidden divider"></div>
       <Pokedex />
     </div>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class  PokemonList extends Component {
   constructor(props){
     super(props)
@@ -10,19 +11,30 @@ class  PokemonList extends Component {
     }
   }
 
-  getPokemonId(url) {
-    const splitUrl = url.split("/")
-    return <div><img src={`${this.state.urlAddOn}/${splitUrl[6]}.gif`}/></div>
+  getPokemonId(pokemon) {
+    const splitUrl = pokemon.url.split("/")
+    return(
+      <div className="ui link card">
+        <div className="ui segement" >
+          <img src={`${this.state.urlAddOn}/${splitUrl[6]}.gif`} className="ui centered small image"/>
+        </div>
+        <div className="content">
+          <div className="header">{pokemon.name}</div>
+          <div className="description">ID: {splitUrl[6]}</div>
+
+        </div>
+      </div>
+    )
   }
   render(){
 
 
     return(
-      <div>
+      <div className="ui centered grid">
         {this.props.pokemon.map(p => (
-          <div key={p.name}>
-            <div>{p.name}</div>
-            <div>{this.getPokemonId(p.url)}</div>
+          <div key={p.name} >
+
+            {this.getPokemonId(p)}
 
           </div>
         ))}

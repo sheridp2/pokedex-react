@@ -47,9 +47,11 @@ class Pokedex extends Component{
 
     return(
       <div>
-        <PokemonList pokemon={this.state.pokemon}/>
-        <button onClick={this.onButtonPrevious.bind(this)}>Previous 20</button>
-        <button onClick={this.onButtonNext.bind(this)}>Next 20</button>
+        <PokemonList pokemon={this.state.pokemon} />
+        <div>
+          <button onClick={this.onButtonPrevious.bind(this)} className="ui left attached button huge">Previous 20</button>
+          <button onClick={this.onButtonNext.bind(this)} className="ui right attached button huge">Next 20</button>
+        </div>
       </div>
     )
   }

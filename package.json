@@ -4,7 +4,8 @@
   "description": "Signup and login page templatization using GraphQL, React, and MongoDB",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",

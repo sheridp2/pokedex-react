@@ -13,7 +13,7 @@ const app = express();
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(keys.mongoURI, {
+mongoose.connect(keys.MONGO_URI, {
   authSource: "admin",
   retryWrites: true,
   dbName: "graphql",
